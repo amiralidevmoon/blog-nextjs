@@ -5,7 +5,9 @@ function MainLayout({children}) {
     return (
         <>
             <Header/>
-            {children}
+            <div className='dark:text-gray-400 text-gray-700 grid place-items-center'>
+                {children}
+            </div>
         </>
     );
 }
