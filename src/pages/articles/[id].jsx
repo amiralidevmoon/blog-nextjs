@@ -1,13 +1,18 @@
 import React from 'react';
 import {getSingleArticlesFromService} from "../../services/articleService";
+import Image from "next/image";
 
 function Single({article}) {
 
     return (
-        <div>
-            <h2>{article.id}-{article.title}</h2>
-            <span>{article.description}</span>
-        </div>
+        <>
+            <div className='flex flex-col text-center mt-5'>
+                <h2 className='text-4xl mb-5'>{article.id}-{article.title}</h2>
+                <Image className='rounded-lg' src={article.image} blurDataURL={article.dataUri} alt={article.title} width='640'
+                       height='480' placeholder='blur'/>
+            </div>
+            <h2 className='mt-5 text-center max-w-2xl'>{article.description}</h2>
+        </>
     );
 }
 

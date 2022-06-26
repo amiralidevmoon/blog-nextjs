@@ -4,9 +4,13 @@ function Sidebar() {
     return (
         <aside className="w-64" aria-label="Sidebar">
             <div className="overflow-y-auto py-4 px-3 bg-gray-50 rounded dark:bg-gray-800">
+                <a href="https://flowbite.com/" className="flex items-center pl-2.5 mb-5">
+                    <img src="/docs/images/logo.svg" className="mr-3 h-6 sm:h-7" alt="Flowbite Logo"/>
+                    <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+                </a>
                 <ul className="space-y-2">
                     <li>
-                        <a href="components/sidebar#"
+                        <a href="#"
                            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                             <svg
                                 className="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -18,7 +22,7 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="components/sidebar#"
+                        <a href="#"
                            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                             <svg
                                 className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -32,7 +36,7 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="components/sidebar#"
+                        <a href="#"
                            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                             <svg
                                 className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -48,7 +52,7 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="components/sidebar#"
+                        <a href="#"
                            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                             <svg
                                 className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -59,7 +63,7 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="components/sidebar#"
+                        <a href="#"
                            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                             <svg
                                 className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -72,7 +76,7 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="components/sidebar#"
+                        <a href="#"
                            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                             <svg
                                 className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -85,7 +89,7 @@ function Sidebar() {
                         </a>
                     </li>
                     <li>
-                        <a href="components/sidebar#"
+                        <a href="#"
                            className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                             <svg
                                 className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
