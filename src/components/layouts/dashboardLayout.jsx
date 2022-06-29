@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
-import Sidebar from "../sidebar";
+import Sidebar from "../sections/sidebar";
 import {BellIcon, MenuAlt2Icon, SearchIcon} from "@heroicons/react/solid";
 import {Menu, Transition} from '@headlessui/react'
 

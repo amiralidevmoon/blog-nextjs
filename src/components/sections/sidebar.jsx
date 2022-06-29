@@ -2,8 +2,12 @@ import React, {Fragment} from 'react';
 import {Dialog, Transition} from "@headlessui/react";
 import {XIcon} from "@heroicons/react/outline";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 function Sidebar({navigation, classNames, sidebarOpen, setSidebarOpen}) {
+    const router = useRouter();
+    const currentRoute = router.pathname;
+
     return (
         <>
             <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -62,13 +66,13 @@ function Sidebar({navigation, classNames, sidebarOpen, setSidebarOpen}) {
                                         <Link href={item.href} key={item.name}>
                                             <a
                                                 className={classNames(
-                                                    item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                    currentRoute === item.href ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                     'group flex items-center px-2 py-2 text-base font-medium rounded-md'
                                                 )}
                                             >
                                                 <item.icon
                                                     className={classNames(
-                                                        item.current ? 'text-gray-300' : 'text-gray-400 group-hover:text-gray-300',
+                                                        currentRoute === item.href ? 'text-gray-300' : 'text-gray-400 group-hover:text-gray-300',
                                                         'mr-4 flex-shrink-0 h-6 w-6'
                                                     )}
                                                     aria-hidden="true"
@@ -80,7 +84,7 @@ function Sidebar({navigation, classNames, sidebarOpen, setSidebarOpen}) {
                                 </nav>
                             </div>
                             <div className="flex-shrink-0 flex bg-gray-700 p-4">
-                                <a href="#" className="flex-shrink-0 group block">
+                                <a href="components/sections/sidebar#" className="flex-shrink-0 group block">
                                     <div className="flex items-center">
                                         <div>
                                             <img
@@ -118,7 +122,7 @@ function Sidebar({navigation, classNames, sidebarOpen, setSidebarOpen}) {
                                     key={item.name}
                                     href={item.href}
                                     className={classNames(
-                                        item.current ? 'bg-gray-800 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                                        currentRoute === item.href ? 'bg-gray-800 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                         'group flex items-center px-2 py-2 text-sm font-medium rounded-md'
                                     )}
                                 >
@@ -135,7 +139,7 @@ function Sidebar({navigation, classNames, sidebarOpen, setSidebarOpen}) {
                         </nav>
                     </div>
                     <div className="flex-shrink-0 flex bg-gray-700 p-4">
-                        <a href="#" className="flex-shrink-0 w-full group block">
+                        <a href="components/sections/sidebar#" className="flex-shrink-0 w-full group block">
                             <div className="flex items-center">
                                 <div>
                                     <img

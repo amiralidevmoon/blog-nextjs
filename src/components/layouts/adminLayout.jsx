@@ -1,13 +1,13 @@
 import React, {Fragment, useState} from 'react';
 import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
-import Sidebar from "../sidebar";
+import Sidebar from "../sections/sidebar";
 import {BellIcon, BookOpenIcon, MenuAlt2Icon, SearchIcon} from "@heroicons/react/solid";
 import {Menu, Transition} from '@headlessui/react'
 
 const navigation = [
-    {name: 'Home', href: '/admin-panel', icon: HomeIcon, current: true},
-    {name: 'Articles', href: '/admin-panel/articles', icon: BookOpenIcon, current: false},
-    {name: 'Users', href: '/admin-panel/users', icon: UsersIcon, current: false},
+    {name: 'Home', href: '/admin-panel', icon: HomeIcon},
+    {name: 'Articles', href: '/admin-panel/articles', icon: BookOpenIcon},
+    {name: 'Users', href: '/admin-panel/users', icon: UsersIcon},
 ]
 
 const userNavigation = [

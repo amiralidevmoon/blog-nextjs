@@ -1,13 +1,21 @@
 import React, {useState} from "react";
 import Link from "next/link";
+import {useRouter} from "next/router";
 
 const Header = () => {
     const [burgerMenu, setburgerMenu] = useState(false);
 
+    const router = useRouter();
+    const currentRoute = router.pathname;
+
+    const defaultClassLink = 'block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent';
+    const activeClassLink = 'block py-2 pr-4 pl-3 bg-blue-700 rounded md:bg-transparent md:text-cyan-300 md:p-0 text-gray-700 dark:text-gray-400';
+
     return (
         <nav className="bg-white border-gray-200 mt-3 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800 top-10 grid place-items-center">
             <div className="container flex flex-wrap justify-between items-center mx-auto relative border p-3 rounded-md border-blue-900">
-                <a className="flex">
+                <span className='flex gap-8'>
+                  <a className="flex">
                     <svg
                         className="mr-3 h-10"
                         viewBox="0 0 52 72"
@@ -28,9 +36,30 @@ const Header = () => {
                         ></path>
                     </svg>
                     <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
-            Amir Ali Taheri
+            Amir Ali Taheri Blog
           </span>
                 </a>
+                <span className='flex mt-1'>
+                    <Link href='/admin-panel' passHref>
+                        <button
+                            className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                          <span
+                              className="relative px-3 py-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                              Admin Panel
+                          </span>
+                        </button>
+                    </Link>
+                    <Link href='/dashboard' passHref>
+                        <button
+                            className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+                      <span
+                          className="relative px-5 py-1.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                          Profile
+                      </span>
+                    </button>
+                    </Link>
+                </span>
+                </span>
                 <button
                     onClick={() => setburgerMenu(!burgerMenu)}
                     type="button"
@@ -73,30 +102,62 @@ const Header = () => {
                 >
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium px-3">
                         <li>
-                            <Link href='/'>
-                                <a className="block py-2 pr-4 pl-3 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 text-gray-700 dark:text-gray-400">
+                            <Link href='/src/pages'>
+                                <a className={currentRoute === "/"
+                                    ? activeClassLink
+                                    : defaultClassLink
+                                }>
                                     Home
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href='/articles'>
-                                <a className="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">
+                                <a className={currentRoute === "/articles"
+                                    ? activeClassLink
+                                    : defaultClassLink
+                                }>
                                     Articles
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/about-us'>
-                                <a className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            <Link href='/src/pages/about-us'>
+                                <a className={currentRoute === "/about-us"
+                                    ? activeClassLink
+                                    : defaultClassLink
+                                }>
                                     About us
                                 </a>
                             </Link>
                         </li>
                         <li>
-                            <Link href='/contact-us'>
-                                <a className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                            <Link href='/src/pages/contact-us'>
+                                <a className={currentRoute === "/contact-us"
+                                    ? activeClassLink
+                                    : defaultClassLink
+                                }>
                                     Contact us
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='/auth/login'>
+                                <a className={currentRoute === "/auth/login"
+                                    ? activeClassLink
+                                    : defaultClassLink
+                                }>
+                                    Login
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href='/auth/register'>
+                                <a className={currentRoute === "/auth/register"
+                                    ? activeClassLink
+                                    : defaultClassLink
+                                }>
+                                    Register
                                 </a>
                             </Link>
                         </li>
