@@ -1,5 +1,5 @@
 import React from 'react';
-import UserLayout from "../../components/layouts/userLayout";
+import DashboardLayout from "../../components/layouts/dashboardLayout";
 
 function Index() {
     return (
@@ -11,8 +11,8 @@ export default Index;
 
 Index.getLayout = (page) => {
     return (
-        <UserLayout>
+        <DashboardLayout>
             {page}
-        </UserLayout>
+        </DashboardLayout>
     )
 }
