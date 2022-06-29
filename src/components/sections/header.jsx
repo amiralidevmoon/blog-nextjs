@@ -122,7 +122,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/src/pages/about-us'>
+                            <Link href='/about-us'>
                                 <a className={currentRoute === "/about-us"
                                     ? activeClassLink
                                     : defaultClassLink
@@ -132,7 +132,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/src/pages/contact-us'>
+                            <Link href='/contact-us'>
                                 <a className={currentRoute === "/contact-us"
                                     ? activeClassLink
                                     : defaultClassLink
