@@ -1,6 +1,8 @@
 import React from 'react';
+
 import {EyeIcon} from "@heroicons/react/solid";
-import DeleteModal from "./deleteModal";
+
+import DeleteModal from "./delete-modal";
 
 function Item({article}) {
     return (

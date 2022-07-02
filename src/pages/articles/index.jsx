@@ -1,5 +1,5 @@
 import React from 'react';
-import {getArticlesFromService} from "../../services/articleService";
+import {getArticlesFromService} from "../../services/article-service";
 import Link from "next/link";
 import Image from "next/image";
 

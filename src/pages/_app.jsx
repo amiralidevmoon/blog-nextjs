@@ -1,5 +1,5 @@
 import 'styles/globals.css'
-import MainLayout from 'components/layouts/mainLayout';
+import MainLayout from 'components/layouts/main-layout';
 import {Provider} from "react-redux";
 import {store} from "../store";
 

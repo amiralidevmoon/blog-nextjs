@@ -1,5 +1,5 @@
 import React from 'react';
-import {getSingleArticlesFromService} from "../../services/articleService";
+import {getSingleArticlesFromService} from "../../services/article-service";
 import Image from "next/image";
 
 function Single({article}) {

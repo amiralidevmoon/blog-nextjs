@@ -1,12 +1,15 @@
 import React, {Fragment, useState} from 'react';
+
 import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
-import Sidebar from "../sections/sidebar";
-import {BellIcon, MenuAlt2Icon, SearchIcon} from "@heroicons/react/solid";
+import {BellIcon, BookOpenIcon, MenuAlt2Icon, SearchIcon} from "@heroicons/react/solid";
 import {Menu, Transition} from '@headlessui/react'
 
+import Sidebar from "../ui/sidebar";
+
 const navigation = [
-    {name: 'Home', href: '/dashboard', icon: HomeIcon, current: true},
-    {name: 'Profile', href: '/dashboard/profile', icon: UsersIcon, current: false},
+    {name: 'Home', href: '/admin-panel', icon: HomeIcon},
+    {name: 'Articles', href: '/admin-panel/articles', icon: BookOpenIcon},
+    {name: 'Users', href: '/admin-panel/users', icon: UsersIcon},
 ]
 
 const userNavigation = [
@@ -19,7 +22,7 @@ function classNames(...classes) {
     return classes.filter(Boolean).join(' ')
 }
 
-function DashboardLayout({children}) {
+function AdminLayout({children}) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
 
     return (
@@ -113,7 +116,7 @@ function DashboardLayout({children}) {
                 <main className="flex-1">
                     <div className="py-6">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-                            <h1 className="text-3xl font-semibold text-gray-400">Dashboard</h1>
+                            <h1 className="text-3xl font-semibold text-gray-400">Admin Panel</h1>
                         </div>
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
                             {/* Replace with your content */}
@@ -127,4 +130,4 @@ function DashboardLayout({children}) {
     );
 }
 
-export default DashboardLayout;
+export default AdminLayout;

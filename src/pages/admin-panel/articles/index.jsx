@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import AdminLayout from "../../../components/layouts/adminLayout";
-import TableHeader from "../../../components/sections/TableHeader";
-import {getArticlesFromService} from "../../../services/articleService";
-import {setArticles} from "../../../store/slices/articleSlice";
+import AdminLayout from "../../../components/layouts/admin-layout";
+import TableHeader from "../../../components/ui/table-header";
+import {getArticlesFromService} from "../../../services/article-service";
+import {setArticles} from "../../../store/slices/article-slice";
 import {sweetAlert} from "../../../helpers/helpers";
 import Item from "../../../components/articles/item";
 import {useDispatch, useSelector} from "react-redux";

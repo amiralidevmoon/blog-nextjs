@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "../sections/header";
+import Header from "../ui/header";
 
 function MainLayout({children}) {
     return (

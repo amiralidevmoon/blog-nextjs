@@ -84,7 +84,7 @@ function Sidebar({navigation, classNames, sidebarOpen, setSidebarOpen}) {
                                 </nav>
                             </div>
                             <div className="flex-shrink-0 flex bg-gray-700 p-4">
-                                <a href="components/sections/sidebar#" className="flex-shrink-0 group block">
+                                <a href="components/ui/sidebar#" className="flex-shrink-0 group block">
                                     <div className="flex items-center">
                                         <div>
                                             <img
@@ -139,7 +139,7 @@ function Sidebar({navigation, classNames, sidebarOpen, setSidebarOpen}) {
                         </nav>
                     </div>
                     <div className="flex-shrink-0 flex bg-gray-700 p-4">
-                        <a href="components/sections/sidebar#" className="flex-shrink-0 w-full group block">
+                        <a href="components/ui/sidebar#" className="flex-shrink-0 w-full group block">
                             <div className="flex items-center">
                                 <div>
                                     <img

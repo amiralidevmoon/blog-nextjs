@@ -1,11 +1,13 @@
 import React, {Fragment, useRef, useState} from 'react';
-import {Dialog, Transition} from '@headlessui/react'
-import {ExclamationIcon} from '@heroicons/react/outline'
+
+import {Dialog, Transition} from '@headlessui/react';
+import {ExclamationIcon} from '@heroicons/react/outline';
 import {useDispatch} from "react-redux";
-import {deleteArticleFromService} from "../../services/articleService";
-import {deleteArticle} from "../../store/slices/articleSlice";
+
+import {deleteArticleFromService} from "../../services/article-service";
+import {deleteArticle} from "../../store/slices/article-slice";
 import {sweetAlert} from "../../helpers/helpers";
-import {setLoading} from "../../store/slices/loadingSlice";
+import {setLoading} from "../../store/slices/loading-slice";
 import {TrashIcon} from "@heroicons/react/solid";
 
 function DeleteModal({articleId}) {
@@ -52,8 +54,8 @@ function DeleteModal({articleId}) {
 
                         {/* This element is to trick the browser into centering the modal contents. */}
                         <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">
-            &#8203;
-          </span>
+                            &#8203;
+                        </span>
                         <Transition.Child
                             as={Fragment}
                             enter="ease-out duration-300"

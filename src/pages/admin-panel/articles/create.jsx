@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import AdminLayout from "../../../components/layouts/adminLayout";
-import TextareaEditor from "../../../components/sections/textareaEditor";
+import AdminLayout from "../../../components/layouts/admin-layout";
+import TextareaEditor from "../../../components/ui/textarea-editor";
 import {useDispatch} from "react-redux";
-import {setLoading} from "../../../store/slices/loadingSlice";
-import {addArticle} from "../../../store/slices/articleSlice";
-import {addArticleFromService} from "../../../services/articleService";
+import {setLoading} from "../../../store/slices/loading-slice";
+import {addArticle} from "../../../store/slices/article-slice";
+import {addArticleFromService} from "../../../services/article-service";
 import {sweetAlert} from "../../../helpers/helpers";
 import {useRouter} from "next/router";
 
