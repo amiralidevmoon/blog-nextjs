@@ -1,6 +1,9 @@
 import React from 'react';
+
 import {BellIcon, MenuAlt2Icon, SearchIcon} from "@heroicons/react/solid";
+
 import ProfileDropdown from "./profile-dropdown";
+import PropTypes from "prop-types";
 
 function HeaderDashboard({userNavigation, setSidebarOpen, classNames}) {
     return (
@@ -42,7 +45,6 @@ function HeaderDashboard({userNavigation, setSidebarOpen, classNames}) {
                         <BellIcon className="h-6 w-6" aria-hidden="true"/>
                     </button>
 
-                    {/* Profile dropdown */}
                     <ProfileDropdown userNavigation={userNavigation} classNames={classNames}/>
                 </div>
             </div>
@@ -50,4 +52,10 @@ function HeaderDashboard({userNavigation, setSidebarOpen, classNames}) {
     );
 }
 
-export default HeaderDashboard;
+HeaderDashboard.propTypes = {
+    userNavigation: PropTypes.object,
+    setSidebarOpen: PropTypes.func,
+    classNames: PropTypes.string,
+}
+
+export default React.memo(HeaderDashboard);
