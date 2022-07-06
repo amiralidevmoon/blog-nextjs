@@ -11,7 +11,7 @@ export const getArticlesFromService = async () => {
     return res.data.data;
 }
 
-export const getSingleArticlesFromService = async (articleId) => {
+export const getSingleArticleFromService = async (articleId) => {
     let res = await articleService.get(`/articles/${articleId}`);
     return res.data.data;
 }

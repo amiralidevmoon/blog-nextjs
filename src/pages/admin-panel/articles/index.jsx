@@ -7,22 +7,34 @@ import {sweetAlert} from "../../../helpers/helpers";
 import Item from "../../../components/articles/item";
 import {useDispatch, useSelector} from "react-redux";
 import Link from "next/link";
-
+import {setLoading} from "../../../store/slices/loading-slice";
+import Loading from "../../../components/ui/loading";
+  
 function Index() {
     const dispatch = useDispatch();
     const articlesList = useSelector((state) => state.articles.list);
+    const loading = useSelector((state) => state.loading.show);
 
     useEffect(() => {
         getArticles();
     }, []);
 
     const getArticles = async () => {
+        dispatch(setLoading(true));
         try {
             let articles = await getArticlesFromService();
             dispatch(setArticles(articles));
+            dispatch(setLoading(false));
         } catch (error) {
             sweetAlert(error.response.data.message, 'error');
+            dispatch(setLoading(false));
         }
+    }
+
+    if (loading) {
+        return (
+            <Loading/>
+        )
     }
 
     return (
@@ -38,7 +50,7 @@ function Index() {
                     headerFields={['#', 'Title', 'Description', 'Created At', 'Settings']}/>
                 <tbody>
                 {
-                    articlesList && articlesList.map((article) => <Item article={article} key={article.id}/>)
+                    articlesList?.map((article) => <Item article={article} key={article.id}/>)
                 }
                 </tbody>
             </table>

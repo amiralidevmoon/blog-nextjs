@@ -102,7 +102,7 @@ const Header = () => {
                 >
                     <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium px-3">
                         <li>
-                            <Link href='/'>
+                            <Link href='/src/pages'>
                                 <a className={currentRoute === "/"
                                     ? activeClassLink
                                     : defaultClassLink
@@ -122,7 +122,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/about-us'>
+                            <Link href='/src/pages/about-us'>
                                 <a className={currentRoute === "/about-us"
                                     ? activeClassLink
                                     : defaultClassLink
@@ -132,7 +132,7 @@ const Header = () => {
                             </Link>
                         </li>
                         <li>
-                            <Link href='/contact-us'>
+                            <Link href='/src/pages/contact-us'>
                                 <a className={currentRoute === "/contact-us"
                                     ? activeClassLink
                                     : defaultClassLink

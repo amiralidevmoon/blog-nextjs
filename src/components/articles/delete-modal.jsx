@@ -9,10 +9,12 @@ import {deleteArticle} from "../../store/slices/article-slice";
 import {sweetAlert} from "../../helpers/helpers";
 import {setLoading} from "../../store/slices/loading-slice";
 import Delete from "../ui/modals/delete";
+import {useRouter} from "next/router";
 
 function DeleteModal({articleId}) {
     const [showDeleteModal, setDeleteModal] = useState(false);
 
+    const router = useRouter();
     const dispatch = useDispatch();
 
     let deleteHandler = useCallback(async () => {
@@ -26,6 +28,7 @@ function DeleteModal({articleId}) {
             dispatch(deleteArticle(articleId));
             dispatch(setLoading(false));
             sweetAlert('کاربر موردنظر با موفقیت حذف شد');
+            await router.push('/admin-panel/articles');
         } catch (error) {
             sweetAlert(error.response.data.message, 'error');
             dispatch(setLoading(false));
@@ -37,7 +40,7 @@ function DeleteModal({articleId}) {
             <TrashIcon className='h-5 w-5 text-rose-500 hover:text-rose-700 transition duration-200' onClick={() => setDeleteModal(true)}/>
             {showDeleteModal && <Delete deleteHandler={deleteHandler} setDeleteModal={setDeleteModal}/>}
         </>
-    );
+    )
 }
 
 DeleteModal.propTypes = {

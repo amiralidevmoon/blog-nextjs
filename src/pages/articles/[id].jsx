@@ -1,6 +1,6 @@
 import React from 'react';
-import {getSingleArticlesFromService} from "../../services/article-service";
 import Image from "next/image";
+import {getSingleArticleFromService} from "../../services/article-service";
 
 function Single({article}) {
 
@@ -20,7 +20,7 @@ export default Single;
 
 export const getServerSideProps = async ({params}) => {
     try {
-        let article = await getSingleArticlesFromService(params.id);
+        let article = await getSingleArticleFromService(params.id);
 
         if (!article.id) {
             return {notFound: true};
