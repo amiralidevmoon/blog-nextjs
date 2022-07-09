@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react';
 import {Menu, Transition} from "@headlessui/react";
+import PropTypes from "prop-types";
 
 function ProfileDropdown({userNavigation, classNames}) {
     return (
@@ -45,6 +46,11 @@ function ProfileDropdown({userNavigation, classNames}) {
             </Transition>
         </Menu>
     );
+}
+
+ProfileDropdown.propTypes = {
+    userNavigation: PropTypes.object,
+    classNames: PropTypes.string,
 }
 
 export default ProfileDropdown;
