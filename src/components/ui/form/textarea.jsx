@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 function Textarea({labelName, handler, nameAttr}) {
     return (
@@ -19,4 +20,10 @@ function Textarea({labelName, handler, nameAttr}) {
     );
 }
 
-export default Textarea;
+Textarea.propTypes = {
+    labelName: PropTypes.string,
+    handler: PropTypes.func.isRequired,
+    nameAttr: PropTypes.string.isRequired,
+}
+
+export default React.memo(Textarea);

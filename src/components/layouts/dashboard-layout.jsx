@@ -2,8 +2,9 @@ import React, {useState} from 'react';
 
 import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
 
-import Sidebar from "../ui/sidebar";
+import Sidebar from "../ui/sections/sidebar";
 import HeaderDashboard from "../dashboard/header-dashboard";
+import PropTypes from "prop-types";
 
 
 const navigation = [
@@ -46,4 +47,11 @@ function DashboardLayout({children}) {
     );
 }
 
-export default DashboardLayout;
+DashboardLayout.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ])
+}
+
+export default React.memo(DashboardLayout);

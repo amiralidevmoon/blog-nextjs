@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 function InputText({labelName, handler, nameAttr}) {
     return (
@@ -16,4 +17,10 @@ function InputText({labelName, handler, nameAttr}) {
     );
 }
 
-export default InputText;
+InputText.propTypes = {
+    labelName: PropTypes.string,
+    handler: PropTypes.func.isRequired,
+    nameAttr: PropTypes.string.isRequired,
+}
+
+export default React.memo(InputText);

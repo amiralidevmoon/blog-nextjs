@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from "../ui/main/header";
+import PropTypes from "prop-types";
 
 function MainLayout({children}) {
     return (
@@ -12,4 +13,11 @@ function MainLayout({children}) {
     );
 }
 
-export default MainLayout;
+MainLayout.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.arrayOf(PropTypes.node),
+        PropTypes.node
+    ])
+}
+
+export default React.memo(MainLayout);

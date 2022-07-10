@@ -2,6 +2,7 @@ import React from 'react';
 import {BellIcon, MenuAlt2Icon} from "@heroicons/react/solid";
 import ProfileDropdown from "../../dashboard/profile-dropdown";
 import SearchInput from "../form/search-input";
+import PropTypes from "prop-types";
 
 function Header({userNavigation, classNames, setSidebarOpen}) {
     return (
@@ -33,4 +34,10 @@ function Header({userNavigation, classNames, setSidebarOpen}) {
     );
 }
 
-export default Header;
+Header.propTypes = {
+    userNavigation: PropTypes.object,
+    setSidebarOpen: PropTypes.func,
+    classNames: PropTypes.string,
+}
+
+export default React.memo(Header);

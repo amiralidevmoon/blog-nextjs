@@ -7,7 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {setLoading} from "../../../store/slices/loading-slice";
 import {getSingleArticleFromService} from "../../../services/article-service";
 import {sweetAlert} from "../../../helpers/helpers";
-import Loading from "../../../components/ui/loading";
+import Loading from "../../../components/ui/sections/loading";
 import AdminLayout from "../../../components/layouts/admin-layout";
 import DeleteModal from "../../../components/articles/delete-modal";
 

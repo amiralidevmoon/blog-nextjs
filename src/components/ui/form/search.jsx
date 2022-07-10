@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {SearchIcon} from "@heroicons/react/solid";
 
 function Search() {
@@ -26,4 +27,4 @@ function Search() {
     );
 }
 
-export default Search;
+export default React.memo(Search);
