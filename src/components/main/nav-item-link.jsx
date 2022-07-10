@@ -13,7 +13,7 @@ function NavItemLink() {
     return (
         <>
             <li>
-                <Link href='/'>
+                <Link href='/src/pages'>
                     <a className={currentRoute === "/"
                         ? activeClassLink
                         : defaultClassLink
@@ -33,7 +33,7 @@ function NavItemLink() {
                 </Link>
             </li>
             <li>
-                <Link href='/about-us'>
+                <Link href='/src/pages/about-us'>
                     <a className={currentRoute === "/about-us"
                         ? activeClassLink
                         : defaultClassLink
@@ -43,7 +43,7 @@ function NavItemLink() {
                 </Link>
             </li>
             <li>
-                <Link href='/contact-us'>
+                <Link href='/src/pages/contact-us'>
                     <a className={currentRoute === "/contact-us"
                         ? activeClassLink
                         : defaultClassLink

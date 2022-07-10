@@ -1,14 +1,15 @@
 import React, {Fragment} from 'react';
+
 import {Menu, Transition} from "@headlessui/react";
 import PropTypes from "prop-types";
 
 function ProfileDropdown({userNavigation, classNames}) {
+
     return (
         <Menu as="div" className="ml-3 relative">
             <div>
                 <Menu.Button
                     className="max-w-xs bg-gray-900 flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-                    <span className="sr-only">Open user menu</span>
                     <img
                         className="h-8 w-8 rounded-full"
                         src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
@@ -49,8 +50,8 @@ function ProfileDropdown({userNavigation, classNames}) {
 }
 
 ProfileDropdown.propTypes = {
-    userNavigation: PropTypes.object,
-    classNames: PropTypes.string,
+    userNavigation: PropTypes.array,
+    classNames: PropTypes.func,
 }
 
-export default ProfileDropdown;
+export default React.memo(ProfileDropdown);

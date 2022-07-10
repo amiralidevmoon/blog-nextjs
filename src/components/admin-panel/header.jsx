@@ -1,7 +1,7 @@
 import React from 'react';
 import {BellIcon, MenuAlt2Icon} from "@heroicons/react/solid";
-import ProfileDropdown from "../../dashboard/profile-dropdown";
-import SearchInput from "../form/search-input";
+import ProfileDropdown from "../dashboard/profile-dropdown";
+import SearchInput from "../ui/form/search-input";
 import PropTypes from "prop-types";
 
 function Header({userNavigation, classNames, setSidebarOpen}) {
@@ -35,9 +35,9 @@ function Header({userNavigation, classNames, setSidebarOpen}) {
 }
 
 Header.propTypes = {
-    userNavigation: PropTypes.object,
+    userNavigation: PropTypes.array,
     setSidebarOpen: PropTypes.func,
-    classNames: PropTypes.string,
+    classNames: PropTypes.func,
 }
 
 export default React.memo(Header);

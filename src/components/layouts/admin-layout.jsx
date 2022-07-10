@@ -4,7 +4,7 @@ import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
 import {BookOpenIcon} from "@heroicons/react/solid";
 
 import Sidebar from "../ui/sections/sidebar";
-import Header from "../ui/admin-panel/header";
+import Header from "../admin-panel/header";
 import PropTypes from "prop-types";
 
 const navigation = [
@@ -25,10 +25,10 @@ function classNames(...classes) {
 
 function AdminLayout({children}) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
-
+ 
     return (
         <>
-            <Sidebar navigation={navigation} classNames={classNames} sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen}/>
+            <Sidebar sidebarOpen={sidebarOpen} navigation={navigation} classNames={classNames} setSidebarOpen={setSidebarOpen}/>
             <div className="md:pl-64 flex flex-col">
                 <Header userNavigation={userNavigation} classNames={classNames} setSidebarOpen={setSidebarOpen}/>
                 <main className="flex-1">
