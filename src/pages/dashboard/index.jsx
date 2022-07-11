@@ -8,7 +8,7 @@ function Index() {
     );
 }
 
-export default React.memo(Index);
+export default Index;
 
 Index.getLayout = (page) => {
     return (

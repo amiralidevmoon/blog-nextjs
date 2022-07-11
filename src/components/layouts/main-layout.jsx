@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from "../main/header";
+import Header from "../app/header";
 import PropTypes from "prop-types";
 
 function MainLayout({children}) {

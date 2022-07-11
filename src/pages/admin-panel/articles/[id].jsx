@@ -64,7 +64,7 @@ function Single() {
     );
 }
 
-export default React.memo(Single);
+export default Single;
 
 Single.getLayout = (page) => {
     return (

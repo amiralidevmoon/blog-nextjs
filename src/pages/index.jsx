@@ -1,6 +1,7 @@
-import {ClipboardListIcon, EmojiHappyIcon, UserGroupIcon} from "@heroicons/react/solid";
 import Link from "next/link";
-import React from "@types/react";
+import React from "react";
+
+import {ClipboardListIcon, EmojiHappyIcon, UserGroupIcon} from "@heroicons/react/solid";
 
 function Home() {
     return (

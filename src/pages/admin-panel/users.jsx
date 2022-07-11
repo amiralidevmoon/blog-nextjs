@@ -8,7 +8,7 @@ function Users() {
     );
 }
 
-export default React.memo(Users);
+export default Users;
 
 Users.getLayout = (page) => {
     return (

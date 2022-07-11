@@ -90,7 +90,7 @@ function Create() {
     );
 }
 
-export default React.memo(Create);
+export default Create;
 
 Create.getLayout = (page) => {
     return (
