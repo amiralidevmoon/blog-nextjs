@@ -1,4 +1,5 @@
 import React, {useCallback, useState} from 'react';
+import {useRouter} from "next/router";
 
 import {useDispatch} from "react-redux";
 import {TrashIcon} from "@heroicons/react/solid";
@@ -9,7 +10,6 @@ import {deleteArticle} from "../../store/slices/article-slice";
 import {sweetAlert} from "../../helpers/helpers";
 import {setLoading} from "../../store/slices/loading-slice";
 import Delete from "../ui/modals/delete";
-import {useRouter} from "next/router";
 
 function DeleteModal({articleId}) {
     const [showDeleteModal, setDeleteModal] = useState(false);

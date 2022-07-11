@@ -38,7 +38,7 @@ function HeaderDashboard({userNavigation, setSidebarOpen, classNames}) {
 HeaderDashboard.propTypes = {
     userNavigation: PropTypes.object,
     setSidebarOpen: PropTypes.func,
-    classNames: PropTypes.string,
+    classNames: PropTypes.func,
 }
 
 export default React.memo(HeaderDashboard);

@@ -1,10 +1,10 @@
 import React from 'react';
+import Link from "next/link";
 
 import {EyeIcon} from "@heroicons/react/solid";
 import PropTypes from "prop-types";
 
 import DeleteModal from "./delete-modal";
-import Link from "next/link";
 
 function Item({article}) {
     return (

@@ -1,7 +1,8 @@
 import {ClipboardListIcon, EmojiHappyIcon, UserGroupIcon} from "@heroicons/react/solid";
 import Link from "next/link";
+import React from "@types/react";
 
-export default function Home() {
+function Home() {
     return (
         <div
             className="relative flex flex-col gap-20 overflow-x-auto sm:rounded-lg top-52 text-gray-500 dark:text-gray-400 max-w-screen-2xl mx-auto grid place-items-center p-5">
@@ -57,3 +58,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default React.memo(Home);

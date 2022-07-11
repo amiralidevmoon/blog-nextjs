@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AdminLayout from "../../components/layouts/admin-layout";
 
 function Index() {
@@ -7,7 +8,7 @@ function Index() {
     );
 }
 
-export default Index;
+export default React.memo(Index);
 
 Index.getLayout = (page) => {
     return (

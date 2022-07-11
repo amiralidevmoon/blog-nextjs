@@ -1,12 +1,14 @@
 import React, {useEffect} from 'react';
+import Link from "next/link";
+
+import {useDispatch, useSelector} from "react-redux";
+
 import AdminLayout from "../../../components/layouts/admin-layout";
 import TableHeader from "../../../components/ui/sections/table-header";
 import {getArticlesFromService} from "../../../services/article-service";
 import {setArticles} from "../../../store/slices/article-slice";
 import {sweetAlert} from "../../../helpers/helpers";
 import Item from "../../../components/articles/item";
-import {useDispatch, useSelector} from "react-redux";
-import Link from "next/link";
 import {setLoading} from "../../../store/slices/loading-slice";
 import Loading from "../../../components/ui/sections/loading";
 
@@ -58,7 +60,7 @@ function Index() {
     );
 }
 
-export default Index;
+export default React.memo(Index);
 
 Index.getLayout = (page) => {
     return (

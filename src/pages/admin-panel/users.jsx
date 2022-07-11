@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AdminLayout from "../../components/layouts/admin-layout";
 
 function Users() {
@@ -7,7 +8,7 @@ function Users() {
     );
 }
 
-export default Users;
+export default React.memo(Users);
 
 Users.getLayout = (page) => {
     return (

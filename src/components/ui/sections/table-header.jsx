@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 function TableHeader({headerFields}) {
     return (
@@ -14,6 +15,10 @@ function TableHeader({headerFields}) {
         </tr>
         </thead>
     );
+}
+
+TableHeader.propTypes = {
+    headerFields: PropTypes.array
 }
 
 export default React.memo(TableHeader);

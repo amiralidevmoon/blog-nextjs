@@ -1,4 +1,7 @@
 import React from 'react';
+
+import PropTypes from "prop-types";
+
 import HeaderDashboard from "../../dashboard/header-dashboard";
 
 function MainContent({userNavigation, setSidebarOpen, classNames}) {
@@ -21,4 +24,10 @@ function MainContent({userNavigation, setSidebarOpen, classNames}) {
     );
 }
 
-export default MainContent;
+MainContent.propTypes = {
+    userNavigation: PropTypes.array,
+    setSidebarOpen: PropTypes.func,
+    classNames: PropTypes.func,
+}
+
+export default React.memo(MainContent);

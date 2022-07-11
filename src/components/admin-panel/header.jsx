@@ -1,8 +1,10 @@
 import React from 'react';
+
 import {BellIcon, MenuAlt2Icon} from "@heroicons/react/solid";
+import PropTypes from "prop-types";
+
 import ProfileDropdown from "../dashboard/profile-dropdown";
 import SearchInput from "../ui/form/search-input";
-import PropTypes from "prop-types";
 
 function Header({userNavigation, classNames, setSidebarOpen}) {
     return (

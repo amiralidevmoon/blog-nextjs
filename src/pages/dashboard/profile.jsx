@@ -1,4 +1,5 @@
 import React from 'react';
+
 import DashboardLayout from "../../components/layouts/dashboard-layout";
 
 function Profile() {
@@ -7,7 +8,7 @@ function Profile() {
     );
 }
 
-export default Profile;
+export default React.memo(Profile);
 
 Profile.getLayout = (page) => {
     return (

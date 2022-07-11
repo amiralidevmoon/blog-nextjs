@@ -1,7 +1,7 @@
 import React, {useState} from "react";
+import NavItemLink from "./nav-item-link";
 
 import HeaderAuthButtons from "./header-auth-buttons";
-import NavItemLink from "./nav-item-link";
 import Logo from "./logo";
 import BurgerMenu from "./burger-menu";
 

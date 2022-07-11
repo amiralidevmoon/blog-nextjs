@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
 import {BookOpenIcon} from "@heroicons/react/solid";
+import PropTypes from "prop-types";
 
 import Sidebar from "../ui/sections/sidebar";
 import Header from "../admin-panel/header";
-import PropTypes from "prop-types";
 
 const navigation = [
     {name: 'Home', href: '/admin-panel', icon: HomeIcon},
@@ -19,13 +19,14 @@ const userNavigation = [
     {name: 'Sign out', href: '#'},
 ]
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
 
 function AdminLayout({children}) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
- 
+
+    const classNames = useCallback((...classes) => {
+        return classes.filter(Boolean).join(' ')
+    }, []);
+
     return (
         <>
             <Sidebar sidebarOpen={sidebarOpen} navigation={navigation} classNames={classNames} setSidebarOpen={setSidebarOpen}/>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useCallback, useState} from 'react';
 
 import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
 
@@ -18,12 +18,12 @@ const userNavigation = [
     {name: 'Sign out', href: '#'},
 ]
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
-
 function DashboardLayout({children}) {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+
+    const classNames = useCallback((...classes) => {
+        return classes.filter(Boolean).join(' ')
+    }, []);
 
     return (
         <>
