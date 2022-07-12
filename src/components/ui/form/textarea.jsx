@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from "prop-types";
 
-function Textarea({labelName, handler, nameAttr}) {
+function Textarea({labelName, handler, nameAttr, defValue = ''}) {
     return (
         <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
             <label htmlFor="last-name" className="block text-sm font-medium text-gray-300 sm:mt-px sm:pt-2">
@@ -13,7 +13,7 @@ function Textarea({labelName, handler, nameAttr}) {
                     <div className="py-2 px-4 bg-white rounded-b-lg dark:bg-gray-800">
                 <textarea id="editor" rows="8"
                           className="block px-1.5 py-1 w-full text-sm text-gray-800 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
-                          placeholder="Write an article..." required name={nameAttr} onChange={handler}></textarea>
+                          placeholder="Write an article..." required name={nameAttr} onChange={handler} defaultValue={defValue}></textarea>
                     </div>
                 </div>
             </div>
@@ -25,6 +25,7 @@ Textarea.propTypes = {
     labelName: PropTypes.string,
     handler: PropTypes.func.isRequired,
     nameAttr: PropTypes.string.isRequired,
+    defValue: PropTypes.string
 }
 
 export default React.memo(Textarea);

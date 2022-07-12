@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from "next/link";
 
-import {EyeIcon} from "@heroicons/react/solid";
+import {EyeIcon, PencilAltIcon} from "@heroicons/react/solid";
 import PropTypes from "prop-types";
 
 import DeleteModal from "./delete-modal";
@@ -25,6 +25,9 @@ function Item({article}) {
                 <DeleteModal articleId={article?.id}/>
                 <Link href={`/admin-panel/articles/${article?.id}`}>
                     <EyeIcon className='w-5 h-5 text-cyan-500 hover:text-cyan-700 transition duration-200'/>
+                </Link>
+                <Link href={`/admin-panel/articles/${article?.id}/edit`}>
+                    <PencilAltIcon className="h-5 w-5 text-blue-400 hover:text-blue-500 transition duration-200"/>
                 </Link>
             </td>
         </tr>
