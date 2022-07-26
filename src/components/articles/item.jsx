@@ -4,7 +4,7 @@ import Link from "next/link";
 import {EyeIcon, PencilAltIcon} from "@heroicons/react/solid";
 import PropTypes from "prop-types";
 
-import DeleteModal from "./delete-modal";
+import DeleteModal from "@/components/articles/delete-modal";
 
 function Item({article}) {
     return (

@@ -3,13 +3,13 @@ import {useRouter} from "next/router";
 
 import {useDispatch} from "react-redux";
 
-import AdminLayout from "../../../components/layouts/admin-layout";
-import {setLoading} from "../../../store/slices/loading-slice";
-import {addArticle} from "../../../store/slices/article-slice";
-import {addArticleFromService} from "../../../services/article-service";
-import {sweetAlert} from "../../../helpers/helpers";
-import InputText from "../../../components/ui/form/input-text";
-import Textarea from "../../../components/ui/form/textarea";
+import {setLoading} from "@/store/slices/loading-slice";
+import {addArticle} from "@/store/slices/article-slice";
+import {addArticleFromService} from "@/services/article-service";
+import {sweetAlert} from "@/helpers/helpers";
+import AdminLayout from "@/components/layouts/admin-layout";
+import InputText from "@/components/ui/form/input-text";
+import Textarea from "@/components/ui/form/textarea";
 
 function Create() {
     const dispatch = useDispatch();

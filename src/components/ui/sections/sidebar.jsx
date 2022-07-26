@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import {useRouter} from "next/router";
 
 import PropTypes from "prop-types";
-import Loading from "./loading";
+import Loading from "@/components/ui/sections/loading";
 
 const SidebarMobile = dynamic(() => import('./sidebar-mobile'), {
     suspense: true,

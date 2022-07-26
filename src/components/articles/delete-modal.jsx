@@ -5,11 +5,11 @@ import {useDispatch} from "react-redux";
 import {TrashIcon} from "@heroicons/react/solid";
 import PropTypes from "prop-types";
 
-import {deleteArticleFromService} from "../../services/article-service";
-import {deleteArticle} from "../../store/slices/article-slice";
-import {sweetAlert} from "../../helpers/helpers";
-import {setLoading} from "../../store/slices/loading-slice";
-import Delete from "../ui/modals/delete";
+import {deleteArticleFromService} from "@/services/article-service";
+import {deleteArticle} from "@/store/slices/article-slice";
+import {sweetAlert} from "@/helpers/helpers";
+import {setLoading} from "@/store/slices/loading-slice";
+import Delete from "@/components/ui/modals/delete";
 
 function DeleteModal({articleId}) {
     const [showDeleteModal, setDeleteModal] = useState(false);

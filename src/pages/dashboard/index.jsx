@@ -1,10 +1,10 @@
 import React from 'react';
 
-import DashboardLayout from "../../components/layouts/dashboard-layout";
+import DashboardLayout from "@/components/layouts/dashboard-layout";
 
 function Index() {
     return (
-        <div>saaaaaaa</div>
+        <div>Welcome to Dashboard</div>
     );
 }
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from "prop-types";
 
-import HeaderDashboard from "../../dashboard/header-dashboard";
+import HeaderDashboard from "@/components/dashboard/header-dashboard";
 
 function MainContent({userNavigation, setSidebarOpen, classNames}) {
     return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AdminLayout from "../../components/layouts/admin-layout";
+import AdminLayout from "@/components/layouts/admin-layout";
 
 function Index() {
     return (

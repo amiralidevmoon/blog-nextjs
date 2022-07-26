@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from "next/image";
 
-import contactUs from "../../public/images/contact-us.jpg";
+import contactUs from "@/public/images/contact-us.jpg";
 
 function ContactUs() {
     return (

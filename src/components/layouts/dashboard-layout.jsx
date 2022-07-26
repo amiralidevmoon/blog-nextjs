@@ -2,8 +2,8 @@ import React, {useCallback, useState} from 'react';
 
 import {HomeIcon, UsersIcon,} from '@heroicons/react/outline'
 
-import Sidebar from "../ui/sections/sidebar";
-import HeaderDashboard from "../dashboard/header-dashboard";
+import Sidebar from "@/components/ui/sections/sidebar";
+import HeaderDashboard from "@/components/dashboard/header-dashboard";
 import PropTypes from "prop-types";
 
 

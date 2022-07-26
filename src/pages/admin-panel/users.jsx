@@ -1,10 +1,10 @@
 import React from 'react';
 
-import AdminLayout from "../../components/layouts/admin-layout";
+import AdminLayout from "@/components/layouts/admin-layout";
 
 function Users() {
     return (
-        <div>users</div>
+        <div>This is our users list</div>
     );
 }
 

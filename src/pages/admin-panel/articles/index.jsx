@@ -3,14 +3,14 @@ import Link from "next/link";
 
 import {useDispatch, useSelector} from "react-redux";
 
-import AdminLayout from "../../../components/layouts/admin-layout";
-import TableHeader from "../../../components/ui/sections/table-header";
-import {getArticlesFromService} from "../../../services/article-service";
-import {setArticles} from "../../../store/slices/article-slice";
-import {sweetAlert} from "../../../helpers/helpers";
-import Item from "../../../components/articles/item";
-import {setLoading} from "../../../store/slices/loading-slice";
-import Loading from "../../../components/ui/sections/loading";
+import {getArticlesFromService} from "@/services/article-service";
+import {setArticles} from "@/store/slices/article-slice";
+import {setLoading} from "@/store/slices/loading-slice";
+import {sweetAlert} from "@/helpers/helpers";
+import AdminLayout from "@/components/layouts/admin-layout";
+import TableHeader from "@/components/ui/sections/table-header";
+import Loading from "@/components/ui/sections/loading";
+import Item from "@/components/articles/item";
 
 function Index() {
     const dispatch = useDispatch();

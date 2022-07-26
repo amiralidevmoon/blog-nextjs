@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import PropTypes from "prop-types";
 
-import {getSingleArticleFromService} from "../../services/article-service";
+import {getSingleArticleFromService} from "@/services/article-service";
 
 function Single({article}) {
 

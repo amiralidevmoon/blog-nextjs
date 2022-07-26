@@ -1,13 +1,13 @@
 import React, {Suspense} from 'react';
+import dynamic from "next/dynamic";
 
 import {BellIcon, MenuAlt2Icon} from "@heroicons/react/solid";
 import PropTypes from "prop-types";
 
-import Search from "../ui/form/search";
-import dynamic from "next/dynamic";
-import Loading from "../ui/sections/loading";
+import Search from "@/components/ui/form/search";
+import Loading from "@/components/ui/sections/loading";
 
-const ProfileDropdown = dynamic(() => import('components/dashboard/profile-dropdown'), {
+const ProfileDropdown = dynamic(() => import('@/components/dashboard/profile-dropdown'), {
     suspense: true,
 })
 

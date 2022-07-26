@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import PropTypes from "prop-types";
 
-import {getArticlesFromService} from "../../services/article-service";
+import {getArticlesFromService} from "@/services/article-service";
 
 function Index({articles}) {
 

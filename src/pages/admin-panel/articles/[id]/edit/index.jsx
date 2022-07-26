@@ -3,12 +3,12 @@ import {useRouter} from "next/router";
 
 import {useDispatch} from "react-redux";
 
-import {setLoading} from "store/slices/loading-slice";
-import {editArticleFromService, getSingleArticleFromService} from "services/article-service";
-import {editArticle} from "store/slices/article-slice";
-import {sweetAlert} from "helpers/helpers";
-import InputText from "components/ui/form/input-text";
-import Textarea from "components/ui/form/textarea";
+import {setLoading} from "@/store/slices/loading-slice";
+import {editArticleFromService, getSingleArticleFromService} from "@/services/article-service";
+import {editArticle} from "@/store/slices/article-slice";
+import {sweetAlert} from "@/helpers/helpers";
+import InputText from "@/components/ui/form/input-text";
+import Textarea from "@/components/ui/form/textarea";
 
 function Edit() {
     const dispatch = useDispatch();

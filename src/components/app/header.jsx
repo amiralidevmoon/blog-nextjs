@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 
-import HeaderAuthButtons from "./header-auth-buttons";
-import Logo from "./logo";
-import BurgerMenu from "./burger-menu";
-import NavLink from "../ui/sections/nav-link";
+import HeaderAuthButtons from "@/components/app/header-auth-buttons";
+import Logo from "@/components/app/logo";
+import BurgerMenu from "@/components/app/burger-menu";
+import NavLink from "@/components/ui/sections/nav-link";
 
 const Header = () => {
     const [burgerMenu, setBurgerMenu] = useState(false);
