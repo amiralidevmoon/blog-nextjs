@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {Suspense} from 'react';
 
 import {BellIcon, MenuAlt2Icon} from "@heroicons/react/solid";
 import PropTypes from "prop-types";
 
-import ProfileDropdown from "./profile-dropdown";
 import Search from "../ui/form/search";
+import dynamic from "next/dynamic";
+import Loading from "../ui/sections/loading";
+
+const ProfileDropdown = dynamic(() => import('components/dashboard/profile-dropdown'), {
+    suspense: true,
+})
 
 function HeaderDashboard({userNavigation, setSidebarOpen, classNames}) {
     return (
@@ -28,7 +33,9 @@ function HeaderDashboard({userNavigation, setSidebarOpen, classNames}) {
                         <BellIcon className="h-6 w-6" aria-hidden="true"/>
                     </button>
 
-                    <ProfileDropdown userNavigation={userNavigation} classNames={classNames}/>
+                    <Suspense fallback={<Loading/>}>
+                        <ProfileDropdown userNavigation={userNavigation} classNames={classNames}/>
+                    </Suspense>
                 </div>
             </div>
         </div>

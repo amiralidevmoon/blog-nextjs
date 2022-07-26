@@ -1,6 +1,9 @@
 import React from 'react';
-import Header from "../app/header";
+
 import PropTypes from "prop-types";
+
+import Header from "../app/header";
+import Footer from "../app/footer";
 
 function MainLayout({children}) {
     return (
@@ -9,6 +12,7 @@ function MainLayout({children}) {
             <div className='dark:text-gray-400 text-gray-700 grid place-items-center'>
                 {children}
             </div>
+            <Footer/>
         </>
     );
 }
