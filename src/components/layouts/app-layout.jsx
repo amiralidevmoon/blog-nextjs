@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import Header from "@/components/app/header";
 import Footer from "@/components/app/footer";
 
-function MainLayout({children}) {
+function AppLayout({children}) {
     return (
         <>
             <Header/>
@@ -17,11 +17,11 @@ function MainLayout({children}) {
     );
 }
 
-MainLayout.propTypes = {
+AppLayout.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node
     ])
 }
 
-export default React.memo(MainLayout);
+export default React.memo(AppLayout);

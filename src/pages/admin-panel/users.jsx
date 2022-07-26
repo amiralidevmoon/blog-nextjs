@@ -4,7 +4,7 @@ import AdminLayout from "@/components/layouts/admin-layout";
 
 function Users() {
     return (
-        <div>This is our users list</div>
+        <div className='text-white mt-10'>This is our users list</div>
     );
 }
 

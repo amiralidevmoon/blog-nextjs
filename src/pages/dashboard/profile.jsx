@@ -4,7 +4,7 @@ import DashboardLayout from "@/components/layouts/dashboard-layout";
 
 function Profile() {
     return (
-        <div>This is your profile</div>
+        <div className="text-white mt-10">This is your profile</div>
     );
 }
 
